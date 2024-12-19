@@ -20,10 +20,26 @@ const audioPlayer: AudioPlayer = {
     }
 }
 
-//const {} = audioPlayer;
+const song = 'New Song';
 
 
-console.log('Song ', audioPlayer.song);
+const { 
+    song:anotherSong, 
+    songDuration:duration, 
+    details
+} = audioPlayer;
 
+const { author } = details;
+
+
+//console.log('Song ', anotherSong);
+//console.log('Duration ', duration);
+//console.log('Author ', author);
+
+const [p1, p2, trunks = 'Not Found']: string[] = ['Goku','Vegeta'];
+
+console.error('Personaje 3:', trunks );
+
+// objetos con llaves y arreglos con corchetes
 
 export{};
