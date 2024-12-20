@@ -21,36 +21,30 @@ interface TaxCalculationOptions{
 }
 
 // creamos la funcion
-function taxCalculation( options: TaxCalculationOptions) : number[]{
+//function taxCalculation( options: TaxCalculationOptions) : [number,number]{
+//function taxCalculation( {tax, products}: TaxCalculationOptions) : [number,number]{
+    function taxCalculation( options: TaxCalculationOptions) : [number,number]{
+    const {tax, products} = options;
     let total = 0;
-    options.products.forEach( product => {
+    products.forEach( ({price}) => {
         //total = total + product.price;
-        total += product.price;
+        total += price;
     });
-    return[total, total * options.tax]
+    return[total, total * tax]
 }
 
 const shoppingCart = [phone, table];
 const tax = 0.15;
 
-const result = taxCalculation({
+const [total, TaxTotal] = taxCalculation({
     products: shoppingCart,
     tax: tax,
 });
 
-console.log('Total', result[0] );
-console.log('Tax', result[1])
-
-
+console.log('Total', total );
+console.log('Tax', TaxTotal)
 
 // creamos constantes / es una variable
 // En TypeScript, aunque las constantes, objetos y funciones pueden parecer conceptos similares porque todos pueden almacenarse en variables
-
-
-
-
-
-
-
 
 export {};
