@@ -5,7 +5,9 @@ import './style.css'
 //import './topics/04-homework-types'
 //import './topics/05-basic-destructuring'
 //import './topics/06-function-destructuring-Solution'
-import './topics/07-import-export'
+//import './topics/07-import-export'
+import './topics/08-Classes'
+
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!

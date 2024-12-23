@@ -33,16 +33,16 @@ interface TaxCalculationOptions{
     return[total, total * tax]
 }
 
-const shoppingCart = [phone, table];
-const tax = 0.15;
+//const shoppingCart = [phone, table];
+//const tax = 0.15;
 
-const [total, TaxTotal] = taxCalculation({
-    products: shoppingCart,
-    tax: tax,
-});
+//const [total, TaxTotal] = taxCalculation({
+//    products: shoppingCart,
+//    tax: tax,
+//});
 
-console.log('Total', total );
-console.log('Tax', TaxTotal)
+//console.log('Total', total );
+//console.log('Tax', TaxTotal)
 
 // creamos constantes / es una variable
 // En TypeScript, aunque las constantes, objetos y funciones pueden parecer conceptos similares porque todos pueden almacenarse en variables
