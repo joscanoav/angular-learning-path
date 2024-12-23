@@ -8,5 +8,16 @@ export class Person{
     ){}
 }
 
-const iroman = new Person('Iroman','NewYork');
+export class Hero extends Person{
+    constructor(
+        public alterEgo: string,
+        public age: number,
+        public realName:string,
+    ){
+        super(realName, 'New York');
+    }
+
+}
+
+const iroman = new Hero('Iroman',45,'Tony');
 console.log(iroman)
