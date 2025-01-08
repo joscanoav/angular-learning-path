@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
+  standalone: false, 
   template: `<h3>counter: {{counter}}</h3>
 
   <button (click)="increaseBy(+1)">+1</button>
@@ -24,3 +25,4 @@ export class CounterComponent {
   }
 
 }
+
