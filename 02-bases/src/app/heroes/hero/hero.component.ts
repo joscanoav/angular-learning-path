@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  public name: string = 'iroman';
+  public age: number = 45;
+
 }
