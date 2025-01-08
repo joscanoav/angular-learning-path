@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
 
+  public heroNames: string[] = ['Spiderman','Iroman','Thor','Hulk','She Hulk'];
+  
+
 }
