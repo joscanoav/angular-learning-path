@@ -11,7 +11,7 @@ import { DbzService } from '../services/dbz.service';
 
 export class MainPageComponent   {
 
-  constructor(public dbzService: DbzService ){
+  constructor(private dbzService: DbzService ){
 
   }
 
