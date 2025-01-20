@@ -6,7 +6,7 @@ import { AboutPageComponent } from './shared/pages/about-page/about-page.compone
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomePageComponent
   },
 
@@ -17,7 +17,7 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: ''
   }
 
 ]
@@ -27,7 +27,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot( routes),
   ],
-  exports: [
+  exports : [
     RouterModule,
   ]
 
