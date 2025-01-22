@@ -17,16 +17,12 @@ export class CountriesService {
     return this.http.get<Country[]>(url)
     .pipe(
       catchError ( () => of([]))
-
-      // tap( countries => console.log('Paso por el tap', countries)),
-      // map( countries => [] ),
-      // tap( countries => console.log('Tap', countries)),
     );
   }
 
   searchCountry( term: string ): Observable<Country[]> {
 
-    const url = `${this.apiUrl}/capital/${ term }`
+    const url = `${this.apiUrl}/name/${ term }`
 
     return this.http.get<Country[]>(url)
     .pipe(
@@ -36,7 +32,7 @@ export class CountriesService {
 
   searchRegion( term: string ): Observable<Country[]> {
 
-    const url = `${this.apiUrl}/capital/${ term }`
+    const url = `${this.apiUrl}/region/${ term }`
 
     return this.http.get<Country[]>(url)
     .pipe(
