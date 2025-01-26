@@ -13,10 +13,10 @@ export class SortByPipe implements PipeTransform {
         return heroes.sort((a,b) => (a.name > b.name) ? 1 : -1)
 
       case 'canFly':
-        return heroes.sort((a,b) => (a.name > b.name) ? 1 : -1)
+        return heroes.sort((a,b) => (a.canFly < b.canFly) ? 1 : -1)
 
       case 'color':
-        return heroes.sort((a,b) => (a.name > b.name) ? 1 : -1)
+        return heroes.sort((a,b) => (a.color > b.color) ? 1 : -1)
 
       default:
         return heroes;
