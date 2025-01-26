@@ -38,7 +38,7 @@
 <div class="grid">
   <div class="col mt-2">
       <p-panel header="Héroes">
-          <p-table [value]="heroes" [tableStyle]="{'min-width': '50rem'}">
+          <p-table [value]="heroes | sortBy:'canFly'" [tableStyle]="{'min-width': '50rem'}">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre</th>
