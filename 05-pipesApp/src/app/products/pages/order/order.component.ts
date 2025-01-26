@@ -36,7 +36,7 @@ export class OrderComponent {
 
     {
       name: 'Linterna verde',
-      canFly: false,
+      canFly: true,
       color: Color.green,
     }
 

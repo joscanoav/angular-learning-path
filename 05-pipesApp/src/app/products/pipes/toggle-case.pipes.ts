@@ -14,3 +14,4 @@ export class ToggleCasePipe implements PipeTransform{
     : value.toLocaleLowerCase();
   }
 }
+
