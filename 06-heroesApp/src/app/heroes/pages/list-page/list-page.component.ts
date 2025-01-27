@@ -8,16 +8,15 @@ import { HeroesService } from '../../services/heroes.service';
   styles: [
   ]
 })
-export class ListPageComponent implements OnInit{
-  public heroes : Hero[] = [];
+export class ListPageComponent implements OnInit {
 
-  constructor( private heroesService: HeroesService){}
+  public heroes: Hero[] = [];
+
+  constructor( private heroesService: HeroesService ) {}
 
   ngOnInit(): void {
-
     this.heroesService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
-
+      .subscribe( heroes => this.heroes = heroes );
   }
 
 }
