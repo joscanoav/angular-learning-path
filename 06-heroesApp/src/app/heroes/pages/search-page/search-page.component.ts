@@ -22,8 +22,13 @@ export class SearchPageComponent {
   searchHero() {
     const value: string = this.searchInput.value || '';
 
-    this.heroesService.getSuggestions( value )
-      .subscribe( heroes => this.heroes = heroes );
+    this.heroesService.getSuggestions(value)
+      .subscribe(heroes => {
+        // Filtrar aquí si necesitas hacerlo en el frontend
+        this.heroes = heroes.filter(hero =>
+          hero.superhero.toLowerCase().includes(value.toLowerCase())
+        );
+      });
   }
 
 

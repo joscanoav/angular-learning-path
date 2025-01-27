@@ -6,10 +6,11 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 
-// localhost:400/heroes/''
+
+// localhost:4200/heroes
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: LayoutPageComponent,
     children: [
       { path: 'new-hero', component: NewPageComponent },
@@ -17,10 +18,8 @@ const routes: Routes = [
       { path: 'edit/:id', component: NewPageComponent },
       { path: 'list', component: ListPageComponent },
       { path: ':id', component: HeroPageComponent },
-      { path: '**',  redirectTo: 'list' },
-
+      { path: '**', redirectTo: 'list' },
     ]
-
   }
 ];
 
