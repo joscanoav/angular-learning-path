@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Publisher } from '../../interfaces/hero.interface';
+import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HeroesService } from '../../services/heroes.service';
 
@@ -28,12 +28,16 @@ public heroForm = new FormGroup({
 
   constructor ( private heroesService: HeroesService ){}
 
-  onSubmit():void{
-    console.log({
-    forIsValid: this.heroForm.valid,
-    valur: this.heroForm.value,
+  get currentHero(): Hero{
+    const hero = this.heroForm.value as Hero;
+    return hero;
+  }
 
-  })
-}
+  onSubmit():void{
+    if(this.heroForm.invalid) return;
+
+    // this.heroesService.updateHero(this.heroForm.value);
+
+  }
 
 }
