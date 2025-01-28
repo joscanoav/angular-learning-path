@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Publisher } from '../../interfaces/hero.interface';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-new-page',
@@ -25,11 +26,14 @@ public heroForm = new FormGroup({
     { id: 'Marvel Comics', desc: 'Marvel - Comics'},
   ];
 
-  onSubmit():void{
-  console.log({
+  constructor ( private heroesService: HeroesService ){}
 
-    formIsValid : this.heroForm.valid,
-    value: this.heroForm.value,
-  });
+  onSubmit():void{
+    console.log({
+    forIsValid: this.heroForm.valid,
+    valur: this.heroForm.value,
+
+  })
 }
+
 }
