@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
@@ -32,7 +33,9 @@ public heroForm = new FormGroup({
   constructor (
     private heroesService: HeroesService,
     private ActivatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private snackbar:MatSnackBar,
+
 
   ){}
 
@@ -63,7 +66,7 @@ public heroForm = new FormGroup({
     if ( this.currentHero.id ){
       this.heroesService.updateHero( this.currentHero)
        .subscribe ( hero =>{
-        //TODO: mostrar snackbar
+        this.showSnackbar(`${hero.superhero} updated!`)
       });
       return;
     }
@@ -71,8 +74,16 @@ public heroForm = new FormGroup({
     this.heroesService.addHero( this.currentHero)
       .subscribe( hero =>{
         //TODO: mostrar snackbar, y navergar a /heroes/edit / hero.id
+        this.router.navigate(['heroes/edit', hero.id]);
+        this.showSnackbar(`${hero.superhero} created!`);
       });
 
+  }
+
+  showSnackbar (message: string):void{
+    this.snackbar.open( message, 'done',{
+      duration: 2500,
+    })
   }
 
 }
