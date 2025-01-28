@@ -35,8 +35,18 @@ public heroForm = new FormGroup({
 
   onSubmit():void{
     if(this.heroForm.invalid) return;
+    if ( this.currentHero.id ){
+      this.heroesService.updateHero( this.currentHero)
+       .subscribe ( hero =>{
+        //TODO: mostrar snackbar
+      });
+      return;
+    }
 
-    // this.heroesService.updateHero(this.heroForm.value);
+    this.heroesService.addHero( this.currentHero)
+      .subscribe( hero =>{
+        //TODO: mostrar snackbar, y navergar a /heroes/edit / hero.id
+      });
 
   }
 
