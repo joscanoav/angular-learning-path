@@ -56,8 +56,9 @@ public heroForm = new FormGroup({
       switchMap( ({id}) => this.heroesService.getHeroById(id)),
     ).subscribe( hero => {
 
-      if ( !hero) return this.router.navigateByUrl('/');
-
+      if ( !hero){
+         return this.router.navigateByUrl('/');
+      }
       this.heroForm.reset(hero);
       return;
 
