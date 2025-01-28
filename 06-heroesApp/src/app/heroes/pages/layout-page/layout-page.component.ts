@@ -14,5 +14,4 @@ export class LayoutPageComponent {
     { label: 'Buscar', icon: 'search', url: './search'},
   ]
 
-
 }
