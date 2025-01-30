@@ -26,7 +26,4 @@ export class PriceComponent implements OnInit, OnChanges, OnDestroy {
     console.log('Componente hijo: ngOnDestroy')
     this.interval$?.unsubscribe();
   }
-
-
-
 }
