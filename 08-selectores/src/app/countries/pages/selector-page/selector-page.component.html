@@ -3,16 +3,30 @@
 
 <form [formGroup]="myForm">
   <!-- Region -->
-   <div class="row mb-3">
-    <div class="col"></div>
-    <label class="form-label">Continente</label>
-    <select formControlName="region" class="form-control">
-      <option value="">-- Selecione Continente --</option>
-      <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">Continente</label>
+      <select formControlName="region" class="form-control">
+        <option value="">-- Selecione Continente --</option>
+        <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+      </select>
+    </div>
+  </div>
 
-    </select>
+  <!-- Countries -->
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">País</label>
+      <select formControlName="region" class="form-control">
+        <option value="">-- Selecione País --</option>
+        <!-- <option *ngFor="let region of regions" [value]="region">{{ region }}</option> -->
+      </select>
+    </div>
+  </div>
 
-   </div>
+
+
+
 </form>
 
 <h3>Formulario</h3>
