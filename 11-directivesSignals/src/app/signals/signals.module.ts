@@ -16,15 +16,11 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
     CounterPageComponent,
     UserInfoPageComponent,
     PropertiesPageComponent,
-    SideMenuComponent,
     SideMenuComponent
   ],
   imports: [
     CommonModule,
-    SignalsRoutingModule,
-  ],
-  exports: [
-    SideMenuComponent // Exporta el componente si es necesario
+    SignalsRoutingModule
   ]
 })
 export class SignalsModule { }
